@@ -17,7 +17,6 @@ This alert detects multiple failed authentication attempts against a single acco
 
 ## Validation Queries
 
-Example investigation query:
 Event
 | where EventID == 4625
 | summarize FailedAttempts=count() by AccountName, IpAddress

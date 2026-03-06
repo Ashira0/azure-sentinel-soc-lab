@@ -1,8 +1,8 @@
 # Azure Sentinel SOC Detection Lab
 
-This project demonstrates the implementation of a small Security Operations Center (SOC) detection environment using Microsoft Sentinel.
+This project demonstrates the creation of a cloud-based SOC monitoring lab using Microsoft Sentinel. 
 
-The lab simulates authentication attacks against an Azure VM and builds custom detection rules to identify malicious login behavior.
+The environment simulates authentication attacks against an Azure virtual machine and implements custom detection rules to identify brute force attempts, successful compromises, and account lockouts using Kusto Query Language (KQL).
 
 ---
 

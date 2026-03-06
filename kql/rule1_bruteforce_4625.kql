@@ -1,0 +1,6 @@
+Event
+| where EventLog == "Security"
+| where EventID == 4625
+| extend AccountName = extract(@"Account Name:\s+([^\r\n]+)", 1, RenderedDescription)
+| extend IpAddress   = extract(@"Source Network Address:\s+([^\r\n]+)", 1, RenderedDescription)
+| summarize FailedAttempts = count()

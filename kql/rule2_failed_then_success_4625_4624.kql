@@ -1,0 +1,20 @@
+Event
+| where TimeGenerated > ago(2h)
+| where EventID == 4625
+| extend Account = tolower(extract(@"<Data Name=""TargetUserName"">([^<]+)</Data>", 1, tostring(EventData)))
+| extend IpAddress = extract(@"<Data Name=""IpAddress"">([^<]+)</Data>", 1, tostring(EventData))
+| where isnotempty(Account)
+| summarize Fails=count(), LastFail=max(TimeGenerated) by Account, IpAddress
+| where Fails >= 3
+| join kind=inner (
+    Event
+    | where TimeGenerated > ago(2h)
+    | where EventID == 4624
+    | extend Account = tolower(extract(@"<Data Name=""TargetUserName"">([^<]+)</Data>", 1, tostring(EventData)))
+    | extend IpAddress = extract(@"<Data Name=""IpAddress"">([^<]+)</Data>", 1, tostring(EventData))
+    | where isnotempty(Account)
+    | project Account, IpAddress, SuccessTime=TimeGenerated
+) on Account, IpAddress
+| where SuccessTime between (LastFail .. LastFail + 15m)
+| project SuccessTime, Account, IpAddress, Fails, LastFail
+| order by SuccessTime desc

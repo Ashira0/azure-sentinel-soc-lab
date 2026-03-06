@@ -23,7 +23,7 @@ Security events generated on the VM are collected by the Azure Monitor Agent and
 
 # Architecture Diagram
 
-![Architecture](screenshots/sentinel_soc_architecture.png)
+![Architecture](sentinel-soc-lab-captures/screenshots/sentinel_soc_architecture.png)
 
 ---
 

@@ -126,6 +126,67 @@ This project demonstrates:
 
 ---
 
+---
+
+---
+
+# Screenshots
+
+## Repository Structure
+
+### Project Folder Layout
+<img width="1903" height="940" alt="screenshots-01-repo-structure" src="https://github.com/user-attachments/assets/5e52800b-d42c-4d55-bd1d-47cec1868401" />
+
+### Final Repository View
+<img width="1807" height="841" alt="final_repo_view" src="https://github.com/user-attachments/assets/e35f6d6d-5a85-4a52-bc27-e1943befdc52" />
+
+---
+
+## Architecture
+
+### SOC Monitoring Architecture Diagram
+<img width="352" height="512" alt="sentinel_soc_architecture" src="https://github.com/user-attachments/assets/d42e0762-dd10-48d8-8633-0238aa635ba1" />
+
+### Architecture Diagram Editor View
+<img width="673" height="719" alt="architecture_editor_view" src="https://github.com/user-attachments/assets/c0b94bfb-3964-41b7-83fa-0dd4faa30331" />
+
+---
+
+## Detection Rules
+
+### Rule 1 – Brute Force Detection (4625)
+<img width="1887" height="945" alt="rule1_configuration" src="https://github.com/user-attachments/assets/a39cc2d5-8b00-44ca-a8e3-1071796d5a33" />
+
+### Rule 2 – Failed Logins Followed by Successful Login
+<img width="1910" height="953" alt="rule2_configuration" src="https://github.com/user-attachments/assets/0eb9f05d-852a-4263-a3e6-251cc72e6274" />
+
+### Rule 3 – Account Lockout Detection (4740)
+<img width="1918" height="961" alt="rule3_query" src="https://github.com/user-attachments/assets/6828b3ff-b5e0-4d5d-9efb-423ed885aaee" />
+
+### Rule 3 Entity Mapping
+<img width="782" height="356" alt="rule3_entity_mapping" src="https://github.com/user-attachments/assets/6fef1447-7622-4e29-9931-23fcb136ee11" />
+
+---
+
+## Detection Validation
+
+### Query Showing Detection Results
+<img width="1605" height="880" alt="query_detection_results" src="https://github.com/user-attachments/assets/deea18c8-29ba-4f8b-a7f9-f10531543a67" />
+
+### Example Sentinel Incident
+<img width="1609" height="903" alt="sentinel_incident_example" src="https://github.com/user-attachments/assets/77041434-6016-488f-a74b-47fdac07a39b" />
+
+---
+
+## Documentation
+
+### Incident Response Guide
+<img width="1780" height="849" alt="incident_response_guide" src="https://github.com/user-attachments/assets/bd9b069b-8add-450e-9c8b-894ad806aadb" />
+
+### KQL Rules in Repository
+<img width="1799" height="827" alt="repo_kql_rules" src="https://github.com/user-attachments/assets/048f5618-17d5-4b4d-85db-4924f89876d7" />
+
 # Author
 
 SOC Lab Project by **Ashkon Irani**
+

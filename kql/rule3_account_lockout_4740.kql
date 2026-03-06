@@ -1,0 +1,6 @@
+Event
+| where EventID == 4740
+| extend Account = extract(@"<Data Name=""TargetUserName"">([^<]+)</Data>", 1, tostring(EventData))
+| extend CallerComputer = extract(@"<Data Name=""CallerComputerName"">([^<]+)</Data>", 1, tostring(EventData))
+| where isnotempty(Account)
+| project TimeGenerated, Computer, Account, CallerComputer

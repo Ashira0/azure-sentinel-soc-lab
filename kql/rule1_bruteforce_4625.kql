@@ -1,6 +1,14 @@
+// Candidate detection: >=5 failed logons for same account/source in 5 minutes.
+// Validate EventData field names and thresholds against your own workspace.
 Event
-| where EventLog == "Security"
-| where EventID == 4625
-| extend AccountName = extract(@"Account Name:\s+([^\r\n]+)", 1, RenderedDescription)
-| extend IpAddress   = extract(@"Source Network Address:\s+([^\r\n]+)", 1, RenderedDescription)
-| summarize FailedAttempts = count()
+| where TimeGenerated >= ago(1h)
+| where EventLog == "Security" and EventID == 4625
+| extend Account = tolower(extract(@'<Data Name="TargetUserName">([^<]*)</Data>', 1, tostring(EventData))),
+         IpAddress = extract(@'<Data Name="IpAddress">([^<]*)</Data>', 1, tostring(EventData))
+| where isnotempty(Account) and Account !in ("-", "anonymous logon")
+| where isnotempty(IpAddress) and IpAddress !in ("-", "127.0.0.1", "::1")
+| summarize FailedAttempts=count(), FirstFailure=min(TimeGenerated), LastFailure=max(TimeGenerated)
+    by Account, IpAddress, WindowStart=bin(TimeGenerated, 5m)
+| where FailedAttempts >= 5
+| project WindowStart, FirstFailure, LastFailure, Account, IpAddress, FailedAttempts
+| order by LastFailure desc

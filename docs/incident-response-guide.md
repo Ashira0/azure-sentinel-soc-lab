@@ -93,3 +93,8 @@ Event
 # Notes
 
 These detections were implemented as part of a Microsoft Sentinel SOC monitoring lab designed to simulate real-world detection engineering and incident response workflows.
+
+
+## Evidence standard for this repository
+
+This guide is a **procedure**, not a claim that every step was completed during an investigation. For any incident reported as investigated, record timestamps, raw events, Sentinel incident ID, reasoning, disposition, and response in [the case study template](incident-case-study-template.md). A successful logon after failures alone does not prove compromise.

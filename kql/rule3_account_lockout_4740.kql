@@ -1,6 +1,10 @@
+// Candidate alert: Windows account lockout. Requires relevant 4740 events
+// to be collected (typically from a domain controller for domain accounts).
 Event
-| where EventID == 4740
-| extend Account = extract(@"<Data Name=""TargetUserName"">([^<]+)</Data>", 1, tostring(EventData))
-| extend CallerComputer = extract(@"<Data Name=""CallerComputerName"">([^<]+)</Data>", 1, tostring(EventData))
+| where TimeGenerated >= ago(1h)
+| where EventLog == "Security" and EventID == 4740
+| extend Account = extract(@'<Data Name="TargetUserName">([^<]*)</Data>', 1, tostring(EventData)),
+         CallerComputer = extract(@'<Data Name="CallerComputerName">([^<]*)</Data>', 1, tostring(EventData))
 | where isnotempty(Account)
-| project TimeGenerated, Computer, Account, CallerComputer
+| project TimeGenerated, Computer, Account, CallerComputer, EventID
+| order by TimeGenerated desc

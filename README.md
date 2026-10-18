@@ -185,7 +185,7 @@ Windows generated an account lockout event, which was forwarded to Microsoft Sen
 
 **Detection Evidence:**
 
-![Account Lockout Detection](screenshots/05-account-lockout-detection.png)
+![Account Lockout Detection](screenshots/05-account-lockout.png)
 
 The results confirmed that Event ID 4740 was generated on the Windows VM and successfully ingested into Log Analytics.
 

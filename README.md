@@ -260,15 +260,11 @@ Repeated failed logins may be caused by legitimate user mistakes, stale credenti
 
 ## Documentation
 
-Additional project documentation is available below:
+The following documents provide additional technical details about the lab implementation, detection validation, and security investigation procedures.
 
-- [Detection Validation Matrix and Test Plan](docs/detection-validation-matrix.md)
-- [SOC Incident Response Guide](docs/incident-response-guide.md)
-- [Incident Case Study Template](docs/incident-case-study-template.md)
-- [Screenshot Refresh Checklist](docs/screenshot-update-checklist.md)
-- [Lab Environment Notes](docs/lab_environment_details.md)
-
-Some supporting documents were written before the October 2026 validation and may still contain pending tasks or earlier environment details.
+- [Detection Validation Matrix](docs/detection-validation-matrix.md) — Documents the authentication detection scenarios, testing methodology, and validation results.
+- [SOC Incident Response Guide](docs/incident-response-guide.md) — Outlines investigation and response procedures for suspicious Windows authentication activity.
+- [Lab Environment Details](docs/lab_environment_details.md) — Describes the Azure infrastructure, security event collection, and Microsoft Sentinel configuration.
 
 ## Skills and Technologies
 

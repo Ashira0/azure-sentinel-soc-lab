@@ -4,7 +4,7 @@ A hands-on Security Operations Center (SOC) lab focused on Windows authenticatio
 
 This project demonstrates the collection and analysis of genuine Windows Security Events generated through controlled authentication simulations, including brute-force activity, failed-to-successful login correlation, and account lockouts.
 
-**Project Status: Detection scenarios successfully validated — October 2026**
+**Project Status: Detection scenarios successfully validated - October 2026**
 
 ## Project Overview
 
@@ -28,7 +28,7 @@ The environment was deployed using Azure for Students.
 |---|---|
 | Cloud Platform | Microsoft Azure |
 | SIEM | Microsoft Sentinel |
-| Virtual Machine | Windows Server 2022 Datacenter |
+| Virtual Machine | Windows Server 2025 Datacenter |
 | VM Name | `vm-soc-lab` |
 | VM Region | Sweden Central |
 | Log Analytics Workspace | `law-sentinel-soc-lab` |

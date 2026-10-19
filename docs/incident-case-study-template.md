@@ -5,7 +5,7 @@
 **Investigation Date:** October 18, 2026  
 **Environment:** Microsoft Sentinel / Azure Windows Server 2022  
 **Incident Type:** Suspected Brute-Force Authentication Attempt  
-**Severity:** Medium (simulated triage classification)  
+**Severity:** Medium 
 **MITRE ATT&CK:** T1110 - Brute Force  
 **Disposition:** Confirmed authorized security testing; no malicious compromise identified  
 **Investigation Type:** Controlled SOC lab simulation

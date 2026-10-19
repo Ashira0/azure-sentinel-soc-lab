@@ -41,7 +41,7 @@ After reviewing the test activity and confirming its authorized origin, the acti
 | Relevant Event IDs | 4625, 4624, 4740 |
 | Source IP | Not established from the captured evidence |
 | Authentication Origin | Authorized testing executed locally against the lab VM |
-| Sentinel Incident ID | Not applicable — manual KQL investigation |
+| Sentinel Incident ID | Not applicable - manual KQL investigation |
 | Investigation Scope | Single Windows VM and temporary local test account |
 
 ### Evidence References
